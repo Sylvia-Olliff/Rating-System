@@ -1,0 +1,169 @@
+{
+	"SITE": {
+		"STATIC_AGE": ""
+	},
+	"KEYS": {
+		"SECRET": "REDACTED",
+		"EXPIRATION_TIME": "2h",
+		"SECURITY_NAME": "REDACTED",
+		"ISSUER": "rogers-brown"
+	},
+	"SMC3": {
+		"LICENSE": "REDACTED",
+		"USER": "REDACTED",
+		"PASS": "REDACTED",
+		"HOST": "REDACTED",
+		"PORT": 0
+	},
+	"MAIL_OPTIONS": {
+		"HOST": "REDACTED",
+		"SECURE_CONNECTION": false,
+		"PORT": 0,
+		"CIPHER": "SSLv3",
+		"AUTH": {
+			"USER": "REDACTED",
+			"PASSWORD": "REDACTED"
+		},
+		"ERROR_RECEPIENTS": [
+			"REDACTED"
+		]
+	},
+	"SYSTEM": {
+		"PORT": 0,
+		"DEBUG_ALL": false,
+		"DEBUG_VIEW": false,
+		"DEBUG_LOGIC": false,
+		"DEBUG_IO": false,
+		"DEBUG_ROUTING": false,
+		"DB": {
+			"FILES": {
+				"PRECS": "REDACTED",
+				"LTL_LANES": "REDACTED",
+				"FAK_DATA": "REDACTED",
+				"STD_LANES": "REDACTED",
+				"CONTACTS": "REDACTED",
+				"CARRIER_PROFILE": "REDACTED",
+				"RATE_PROFILE": "REDACTED",
+				"ADDRESSES": "REDACTED",
+				"FUEL_PRICES": "REDACTED",
+				"FUEL_TABLES": "REDACTED",
+				"DUMMY": "REDACTED"
+			}
+		},
+		"SESSIONS": {
+			"SESSION_STORE_NAME": "sessionStore",
+			"SESSION_STORE_PATH": "./API/db/sessionDB.db"
+		},
+		"ADMIN": {
+			"SOCKET_ADDRESS": "http://localhost:8383/usage-update"
+		}
+	},
+	"LOCATIONS": {
+		"LANE_MAINTENANCE": "REDACTED",
+		"LTL_MAINTENANCE": "REDACTED",
+		"RATE_QUERY": "REDACTED",
+		"RATE_BUILDER": "REDACTED",
+		"LTL_BUILDER": "REDACTED",
+		"RM_API": "REDACTED"
+	},
+	"SETTINGS": {
+		"ACCURACY": 2,
+		"POP_LIMIT": 500
+	},
+	"ERROR_MESSAGES": {
+		"LOGIN": {
+			"JWT_CREATION": {
+					"type": "LOGIN",
+					"message": "There was an error when granting you access. Sysop has been contacted, and someone will be contacting you as soon as they are able.",
+					"adminMessage": "<p>There was an error creating the JSON Web Token.</p><br /> <p>Error: %s</p>"
+			},
+			"AS400_RESPONSE_ERROR": {
+				"type": "LOGIN",
+				"message": "There was an error when granting you access. Sysop has been contacted, and someone will be contacting you as soon as they are able.",
+				"adminMessage": "<p>There was an error creating the JSON Web Token.</p><br /> <p>Error: %s</p>"
+			}
+		},
+		"EJS": {
+			"MAINTENANCE": {
+				"LTL": {
+					"type": "EJS_ENGINE",
+					"message": "There was an error when loading a LTL Maintenance page. Sysop has been contacted, and someone will be contacting you as soon as they are able.",
+					"adminMessage": "<p>There was an error loading a LTL Maintenance page.</p><br /> <p>Error: %s</p>"
+				},
+				"STANDARD": {
+					"type": "EJS_ENGINE",
+					"message": "There was an error when loading a Standard Maintenance page. Sysop has been contacted, and someone will be contacting you as soon as they are able.",
+					"adminMessage": "<p>There was an error loading a Standard Maintenance page.</p><br /> <p>Error: %s</p>"
+				}
+			},
+			"QUERY": {
+				"type": "EJS_ENGINE",
+				"message": "There was an error when loading a Query Page. Sysop has been contacted, and someone will be contacting you as soon as they are able.",
+				"adminMessage": "<p>There was an error loading a Query Page.</p><br /> <p>Error: %s</p>"
+			}
+		},
+		"COMMUNICATION": {
+			"SMC_CLIENT": {
+				"type": "COMMUNICATION",
+				"message": "An error was encountered while attempting to contact SMC's Server. Sysop has been contacted, and someone will be contacting you as soon as they are able.",
+				"adminMessage": "<p>Error Occurred when attempting to create a SOAP Client for SMC</p><br /> <p>Error: %s</p>"
+			},
+			"SMC_SEND": {
+				"type": "COMMUNICATION",
+				"message": "An error was encountered while attempting to contact SMC's Server. Sysop has been contacted, and someone will be contacting you as soon as they are able.",
+				"adminMessage": "<p>Communication Error with SMC's Server.</p><br /> <p>Error: %s</p>"
+			},
+			"DATA": {
+				"type": "UNCLEAN_DATA",
+				"message": "An error was encountered while attempting to contact SMC's Server. Sysop has been contacted, and someone will be contacting you as soon as they are able.",
+				"adminMessage": "<p>No Route data found when prepping for SMC transmission. This should only be possible if illegal characters were detected in the route data.</p><br /> <p>Error: %s</p>"
+			},
+			"RAND_MCNALLEY": {
+				"type": "COMMUNICATION",
+				"message": "A communication Error has occurred. Sysop has been contacted, and someone will be contacting you as soon as they are able.",
+				"adminMessage": "<p>There was an error when attempting to contact the Rand McNalley API Server running on ABI03. Please verify that ABI03 is accessible</p><br /> <p>Error: %s</p>"
+			}
+		},
+		"SQL": {
+			"MAINTENANCE": {
+				"type": "SQL",
+				"message": "An error occured attempting to contact the Database. Sysop has been contacted, and someone will be contacting you as soon as they are able.",
+				"adminMessage": "<p>There was an error with a SQL Request within the Standard Maintenance controller.</p><br /> <p>Error: %s</p>"
+			},
+			"LTL_MAINTENANCE": {
+				"type": "SQL",
+				"message": "An error occured attempting to contact the Database. Sysop has been contacted, and someone will be contacting you as soon as they are able.",
+				"adminMessage": "<p>There was an error with a SQL Request within the LTL Maintenance controller</p><br /> <p>Error: %s</p>"
+			},
+			"NO_RESULTS": {
+				"NOT_OK": {
+					"type": "SQL",
+					"message": "No lanes were found for this selection. This was not expected... Sysop has been contacted, and someone will be contacting you as soon as they are able.",
+					"adminMessage": "<p>There was an error encountered when the Maintenance Controller attempted to look up a lane that should of existed and was unable to do so.</p><br /> <p>Error: %s</p>"
+				},
+				"OK": {
+					"type": "NO_RESULTS",
+					"message": "No Results found for that criteria",
+					"adminMessage": ""
+				}
+			},
+			"QUERY": {
+				"STANDARD": {
+					"type": "SQL",
+					"message": "An error occured attempting to contact the Database. Sysop has been contacted, and someone will be contacting you as soon as they are able.",
+					"adminMessage": "<p>There was an error with a SQL Request within the Standard Rate Query controller</p><br /> <p>Error: %s</p>"
+				},
+				"LTL": {
+					"type": "SQL",
+					"message": "An error occured attempting to contact the Database. Sysop has been contacted, and someone will be contacting you as soon as they are able.",
+					"adminMessage": "<p>There was an error with a SQL Request within the LTL Rate Query controller</p><br /> <p>Error: %s</p>"
+				},
+				"ROUTING": {
+					"type": "ROUTING",
+					"message": "There was an error calculating your route. Sysop has been contacted, and someone will be contacting you as soon as they are able.",
+					"adminMessage": "<p>The user somehow managed to break the routing system. (figures out what combination they put in for City, State, and zipcode). Please record this event in Sysop Info as this should not be possible</p><br /> <p>Error: %s</p>"
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,39 @@
+{
+  "source": {
+    "include": ["./"],
+    "exclude": ["node_modules", "dist"],
+    "includePattern": ".+\\.js(doc|x)?$",
+    "excludePattern": "(^|\\/|\\\\)_"
+  },
+  "opts": {
+    "template": "./node_modules/ink-docstrap/template",
+    "recurse": true,
+    "package": "./package.json",
+    "readme": "./README.md"
+  },
+  "tags": {
+    "allowUnknownTags": true
+  },
+  "plugins": ["plugins/markdown"],
+  "templates": {
+    "logoFile": "",
+    "cleverLinks": true,
+    "monospaceLinks": false,
+    "dateFormat": "MM/dd/YYYY",
+    "outputSourceFiles": true,
+    "outputSourcePath": true,
+    "systemName": "Rating System",
+    "footer": "Authors: Joe Olliff",
+    "copyright": "Rogers & Brown Customs Brokers Copyright © 2010-2020",
+    "navType": "vertical",
+    "theme": "cerulean",
+    "linenums": true,
+    "collapseSymbols": false,
+    "inverseNav": true,
+    "protocol": "html://",
+    "methodHeadingReturns": true
+  },
+  "markdown": {
+    "hardwrap": true
+  }
+}

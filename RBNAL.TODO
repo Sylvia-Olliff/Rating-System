@@ -1,0 +1,10 @@
+Rating System:
+  Restructure Tasks:
+    ☐ models directory should only contain models
+    ☐ single tool for contacting Rand McNalley API
+    ☐ seperate out services from models
+    ☐ routes should contain the middleware they use since it should be few.
+
+Order by logic for LTL
+SELECT * FROM BNADISCP ORDER BY                     
+CAST(RIGHT(RDLABEL, LENGTH(RDLABEL) - 4) AS INTEGER)
