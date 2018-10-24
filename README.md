@@ -7,8 +7,12 @@ It can also provide formatted lists of all active customers and their contact in
 
 ---
 
-#GITHUB Users!
-The below documentation was intended for internal use. If you wish to see the same documentation this refers to, clone this repository, install all dependencies, and use the command 'npm run doc'. You will then have the js-doc static page under the directory ./docs
+# GITHUB Users!
+The below documentation was intended for internal use. If you wish to see the same documentation this refers to, clone this repository, install all dependencies, and use the command 'npm run doc'. You will then have the js-doc static page under the directory ./docs. 
+Also Please note that key portions of the configuration file for this application has been removed. If you attempt to run this application it will FAIL! This code is simply here as a demonstration for those interested in detailed documentation using JSDOC and how to implement a REST API in the real world. 
+
+# Copyright
+This code has been released for public display in agreement with Bo Brown Presedent of Rogers and Brown Customs Brokers. Contact bo_brown@rogers-brown.com for more information.
 
 # Using This Interactive Documentation
 
